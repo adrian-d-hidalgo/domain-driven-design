@@ -1,9 +1,10 @@
 # Domain-Driven Design
+
 ## A Conceptual Foundation
 
-*Based on the works of Eric Evans (2003) and Vaughn Vernon (2013)*
+_Based on the works of Eric Evans (2003) and Vaughn Vernon (2013)_
 
----
+***
 
 ## About This Book
 
@@ -11,66 +12,60 @@ This book provides a comprehensive conceptual foundation for Domain-Driven Desig
 
 **Type:** Conceptual reference book (technology-agnostic)
 
----
+***
 
 ## How to Read This Book
 
 **If you're new to DDD:**
-1. Start with [Introduction](#introduction) to understand the core philosophy
-2. Read [Chapter 1: When to Use DDD](01-when-to-use-ddd.md) to assess applicability
-3. Study [Chapter 2: Strategic Design](02-strategic-design.md) before diving into tactical patterns
-4. Reference [Chapter 3: Tactical Patterns](03-tactical-patterns.md) as needed
+
+1. Start with [Introduction](./#introduction) to understand the core philosophy
+2. Read [Chapter 1: When to Use DDD](group-1/chapters/01-when-to-use-ddd.md) to assess applicability
+3. Study [Chapter 2: Strategic Design](group-1/chapters/02-strategic-design.md) before diving into tactical patterns
+4. Reference [Chapter 3: Tactical Patterns](group-1/chapters/03-tactical-patterns.md) as needed
 
 **If you're experienced:**
-- Use the [Table of Contents](#table-of-contents) to jump to specific patterns
-- Review [Chapter 5: Common Pitfalls](05-common-pitfalls.md) to avoid known issues
-- Consult the [Quick Reference](quick-reference.md) for pattern comparisons
 
----
+* Use the [Table of Contents](./#table-of-contents) to jump to specific patterns
+* Review [Chapter 5: Common Pitfalls](group-1/chapters/05-common-pitfalls.md) to avoid known issues
+* Consult the [Quick Reference](quick-reference.md) for pattern comparisons
+
+***
 
 ## Table of Contents
 
-### [Introduction](#introduction)
+### [Introduction](./#introduction)
+
 Understanding the Philosophy Behind DDD
 
 ### Core Chapters
 
-1. **[When to Use DDD](01-when-to-use-ddd.md)**
-   Applicability and Decision Criteria
-
-2. **[Strategic Design](02-strategic-design.md)**
-   - Domain and Subdomain
-   - Bounded Context
-   - Ubiquitous Language
-   - Strategic Classification
-
-3. **[Tactical Patterns](03-tactical-patterns.md)**
-   - Entity
-   - Value Object
-   - Aggregate
-   - Domain Events
-   - Repository
-   - Domain Services
-
-4. **[Integration Patterns](04-integration-patterns.md)**
-   - Context Map
-   - Shared Kernel
-   - Anti-Corruption Layer
-
-5. **[Common Pitfalls](05-common-pitfalls.md)**
-   Mistakes to Avoid
+1. [**When to Use DDD**](group-1/chapters/01-when-to-use-ddd.md) Applicability and Decision Criteria
+2. [**Strategic Design**](group-1/chapters/02-strategic-design.md)
+   * Domain and Subdomain
+   * Bounded Context
+   * Ubiquitous Language
+   * Strategic Classification
+3. [**Tactical Patterns**](group-1/chapters/03-tactical-patterns.md)
+   * Entity
+   * Value Object
+   * Aggregate
+   * Domain Events
+   * Repository
+   * Domain Services
+4. [**Integration Patterns**](group-1/chapters/04-integration-patterns.md)
+   * Context Map
+   * Shared Kernel
+   * Anti-Corruption Layer
+5. [**Common Pitfalls**](group-1/chapters/05-common-pitfalls.md) Mistakes to Avoid
 
 ### Appendices
 
-- **[Appendix A: Strategic Classification Framework](appendix-a-strategic-classification.md)**
-  Detailed framework for classifying subdomains (Core, Supporting, Generic) with e-commerce examples
+* [**Appendix A: Strategic Classification Framework**](appendix-a-strategic-classification.md) Detailed framework for classifying subdomains (Core, Supporting, Generic) with e-commerce examples
+* [**Quick Reference**](quick-reference.md) Pattern comparisons, decision trees, and cheat sheets
 
-- **[Quick Reference](quick-reference.md)**
-  Pattern comparisons, decision trees, and cheat sheets
+### [References and Further Reading](./#references-and-further-reading)
 
-### [References and Further Reading](#references-and-further-reading)
-
----
+***
 
 ## Introduction
 
@@ -100,83 +95,69 @@ Traditional software development often starts with database schema design or UI 
 
 This inversion is powerful for complex domains but adds overhead for simple applications. Understanding when to apply DDD is as important as understanding how.
 
-> **Next:** Start with [Chapter 1: When to Use DDD](01-when-to-use-ddd.md) to determine if DDD is right for your project.
+> **Next:** Start with [Chapter 1: When to Use DDD](group-1/chapters/01-when-to-use-ddd.md) to determine if DDD is right for your project.
 
----
+***
 
 ## References and Further Reading
 
 ### Foundational Books
 
-1. **Evans, Eric (2003)**. *Domain-Driven Design: Tackling Complexity in the Heart of Software*
-   Addison-Wesley Professional
-   ISBN: 978-0321125215
-   - The original DDD book, establishing core concepts and patterns
-   - Best for: Deep theoretical understanding
-   - [Publisher Link](https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217)
-
-2. **Vernon, Vaughn (2013)**. *Implementing Domain-Driven Design*
-   Addison-Wesley Professional
-   ISBN: 978-0321834577
-   - Practical implementation guide with detailed examples
-   - Best for: Hands-on practitioners
-   - [Publisher Link](https://www.informit.com/store/implementing-domain-driven-design-9780321834577)
-
-3. **Vernon, Vaughn (2016)**. *Domain-Driven Design Distilled*
-   Addison-Wesley Professional
-   ISBN: 978-0134434421
-   - Condensed overview of key concepts
-   - Best for: Quick reference and team onboarding
-   - [Publisher Link](https://www.informit.com/store/domain-driven-design-distilled-9780134434421)
+1. **Evans, Eric (2003)**. _Domain-Driven Design: Tackling Complexity in the Heart of Software_ Addison-Wesley Professional ISBN: 978-0321125215
+   * The original DDD book, establishing core concepts and patterns
+   * Best for: Deep theoretical understanding
+   * [Publisher Link](https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217)
+2. **Vernon, Vaughn (2013)**. _Implementing Domain-Driven Design_ Addison-Wesley Professional ISBN: 978-0321834577
+   * Practical implementation guide with detailed examples
+   * Best for: Hands-on practitioners
+   * [Publisher Link](https://www.informit.com/store/implementing-domain-driven-design-9780321834577)
+3. **Vernon, Vaughn (2016)**. _Domain-Driven Design Distilled_ Addison-Wesley Professional ISBN: 978-0134434421
+   * Condensed overview of key concepts
+   * Best for: Quick reference and team onboarding
+   * [Publisher Link](https://www.informit.com/store/domain-driven-design-distilled-9780134434421)
 
 ### Additional Resources
 
-4. **Nilsson, Jimmy (2006)**. *Applying Domain-Driven Design and Patterns*
-   Addison-Wesley Professional
-   ISBN: 978-0321268204
-   - Practical examples with .NET
-   - Combines DDD with design patterns
-
-5. **Khononov, Vlad (2021)**. *Learning Domain-Driven Design*
-   O'Reilly Media
-   ISBN: 978-1098100131
-   - Modern take on DDD with current practices
-   - Strategic patterns and Bounded Contexts focus
+4. **Nilsson, Jimmy (2006)**. _Applying Domain-Driven Design and Patterns_ Addison-Wesley Professional ISBN: 978-0321268204
+   * Practical examples with .NET
+   * Combines DDD with design patterns
+5. **Khononov, Vlad (2021)**. _Learning Domain-Driven Design_ O'Reilly Media ISBN: 978-1098100131
+   * Modern take on DDD with current practices
+   * Strategic patterns and Bounded Contexts focus
 
 ### Online Resources
 
-- **Domain-Driven Design Community**: [dddcommunity.org](https://dddcommunity.org)
-- **Eric Evans' Original Website**: Articles and presentations on DDD concepts
-- **Vaughn Vernon's Blog**: Practical DDD implementation guidance
+* **Domain-Driven Design Community**: [dddcommunity.org](https://dddcommunity.org)
+* **Eric Evans' Original Website**: Articles and presentations on DDD concepts
+* **Vaughn Vernon's Blog**: Practical DDD implementation guidance
 
 ### Recommended Complementary Reading
 
 For practical implementation examples, look for technology-specific DDD cookbooks and hexagonal architecture guides in your framework of choice.
 
----
+***
 
 ## Learning Path
 
 ### For Beginners
 
 1. **Read this book** (domain-driven-design/)
-   - Start with [Introduction](#introduction)
-   - Study [When to Use DDD](01-when-to-use-ddd.md)
-   - Learn [Strategic Design](02-strategic-design.md)
-   - Understand [Tactical Patterns](03-tactical-patterns.md)
-
+   * Start with [Introduction](./#introduction)
+   * Study [When to Use DDD](group-1/chapters/01-when-to-use-ddd.md)
+   * Learn [Strategic Design](group-1/chapters/02-strategic-design.md)
+   * Understand [Tactical Patterns](group-1/chapters/03-tactical-patterns.md)
 2. **Practice with examples**
-   - Build sample projects in your chosen framework
-   - Refer back to theory when confused
+   * Build sample projects in your chosen framework
+   * Refer back to theory when confused
 
 ### For Experienced Developers
 
-- Use [Quick Reference](quick-reference.md) for pattern lookups
-- Review [Common Pitfalls](05-common-pitfalls.md) regularly
-- Consult [Appendix A](appendix-a-strategic-classification.md) for strategic decisions
+* Use [Quick Reference](quick-reference.md) for pattern lookups
+* Review [Common Pitfalls](group-1/chapters/05-common-pitfalls.md) regularly
+* Consult [Appendix A](appendix-a-strategic-classification.md) for strategic decisions
 
----
+***
 
 **Remember:** This is a **conceptual reference book**. For code examples and practical implementation, look for technology-specific cookbooks in your chosen framework.
 
-**Start reading:** [Chapter 1: When to Use DDD →](01-when-to-use-ddd.md)
+**Start reading:** [Chapter 1: When to Use DDD →](group-1/chapters/01-when-to-use-ddd.md)

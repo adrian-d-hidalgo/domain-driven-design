@@ -10,8 +10,8 @@ Strategic Design provides tools for understanding, organizing, and managing comp
 
 ### Key Concepts
 
-- **Domain**: The whole business problem (e.g., "E-Commerce Platform")
-- **Subdomain**: A distinct part with specific responsibilities (e.g., "Product Catalog", "Order Processing", "Shipping")
+* **Domain**: The whole business problem (e.g., "E-Commerce Platform")
+* **Subdomain**: A distinct part with specific responsibilities (e.g., "Product Catalog", "Order Processing", "Shipping")
 
 ```mermaid
 graph TB
@@ -51,8 +51,9 @@ graph TB
 **Logical boundary** where ubiquitous language applies consistently.
 
 Same word can mean different things in different contexts:
-- "Customer" in Sales BC = buyer with order history
-- "Customer" in Support BC = ticket owner
+
+* "Customer" in Sales BC = buyer with order history
+* "Customer" in Support BC = ticket owner
 
 ```mermaid
 graph LR
@@ -109,19 +110,19 @@ Strategic classification helps you prioritize where to invest your engineering r
 
 ### Three Classifications
 
-| Type | Investment | Strategy | When to Use |
-|------|-----------|----------|-------------|
-| **Core** | 60-70% | Custom-built, best team, full DDD | Competitive differentiator, unique business advantage |
-| **Supporting** | 20-30% | Build in-house, modular & reliable | Necessary but not differentiating, enables Core |
-| **Generic** | 5-10% | Buy/SaaS/OSS, minimal custom code | Commodity solution, standardized problem |
+| Type           | Investment | Strategy                           | When to Use                                           |
+| -------------- | ---------- | ---------------------------------- | ----------------------------------------------------- |
+| **Core**       | 60-70%     | Custom-built, best team, full DDD  | Competitive differentiator, unique business advantage |
+| **Supporting** | 20-30%     | Build in-house, modular & reliable | Necessary but not differentiating, enables Core       |
+| **Generic**    | 5-10%      | Buy/SaaS/OSS, minimal custom code  | Commodity solution, standardized problem              |
 
 ### Quick Examples (E-Commerce)
 
-- **Core**: Product recommendations, dynamic pricing, fraud detection
-- **Supporting**: Order management, catalog, shipping, notifications
-- **Generic**: Email delivery, authentication, file storage
+* **Core**: Product recommendations, dynamic pricing, fraud detection
+* **Supporting**: Order management, catalog, shipping, notifications
+* **Generic**: Email delivery, authentication, file storage
 
-> For detailed examples, decision criteria, and team allocation guidance, see [Appendix A: Strategic Classification Framework](appendix-a-strategic-classification.md)
+> For detailed examples, decision criteria, and team allocation guidance, see [Appendix A: Strategic Classification Framework](../../appendix-a-strategic-classification.md)
 
 ### Decision Flowchart
 
@@ -150,9 +151,10 @@ graph TD
     style START fill:#fafafa,stroke:#9e9e9e,stroke-width:2px
 ```
 
----
+***
 
 **Navigation:**
-- [← Previous: When to Use DDD](01-when-to-use-ddd.md)
-- [Next: Tactical Patterns →](03-tactical-patterns.md)
-- [Table of Contents](README.md#table-of-contents)
+
+* [← Previous: When to Use DDD](01-when-to-use-ddd.md)
+* [Next: Tactical Patterns →](03-tactical-patterns.md)
+* [Table of Contents](../../#table-of-contents)

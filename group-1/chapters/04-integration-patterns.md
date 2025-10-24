@@ -40,12 +40,12 @@ graph TB
 
 ### Integration Patterns
 
-- **Shared Kernel**: Common code between contexts (use sparingly)
-- **Published Language**: Well-defined API/events for integration
-- **Open Host Service**: Generic API for any consumer
-- **Anti-Corruption Layer**: Translation protecting domain from external models
-- **Conformist**: Downstream conforms to upstream's model
-- **Customer/Supplier**: Negotiated relationship
+* **Shared Kernel**: Common code between contexts (use sparingly)
+* **Published Language**: Well-defined API/events for integration
+* **Open Host Service**: Generic API for any consumer
+* **Anti-Corruption Layer**: Translation protecting domain from external models
+* **Conformist**: Downstream conforms to upstream's model
+* **Customer/Supplier**: Negotiated relationship
 
 ## 4.2 Shared Kernel
 
@@ -54,14 +54,16 @@ Code shared between Bounded Contexts (use sparingly).
 ### What belongs in Shared Kernel
 
 ✅ **Appropriate:**
-- Generic Value Objects (Email, Money)
-- Base types (DomainEvent, Result<T>)
-- Common interfaces
+
+* Generic Value Objects (Email, Money)
+* Base types (DomainEvent, Result)
+* Common interfaces
 
 ❌ **Not appropriate:**
-- Business logic
-- Complete entities
-- Domain-specific rules
+
+* Business logic
+* Complete entities
+* Domain-specific rules
 
 ### Example
 
@@ -93,9 +95,9 @@ Translation layer protecting domain from external models.
 
 ### Purpose
 
-- Isolate your domain from external system changes
-- Translate external models to your domain language
-- Prevent external complexity from leaking into your domain
+* Isolate your domain from external system changes
+* Translate external models to your domain language
+* Prevent external complexity from leaking into your domain
 
 ### Example
 
@@ -120,24 +122,25 @@ export class LegacyUserACL implements ForRetrievingCustomers {
 
 ### When to Use
 
-- Integrating with legacy systems
-- Working with third-party APIs
-- Protecting domain from unstable external interfaces
-- Different modeling philosophies between contexts
+* Integrating with legacy systems
+* Working with third-party APIs
+* Protecting domain from unstable external interfaces
+* Different modeling philosophies between contexts
 
 ## Integration Pattern Selection
 
-| Pattern | Use When | Benefits | Costs |
-|---------|----------|----------|-------|
-| **Shared Kernel** | High trust, shared team, stable interfaces | Low duplication | High coupling |
-| **Published Language** | Multiple consumers, stable contract | Clear boundaries | Documentation overhead |
-| **Anti-Corruption Layer** | Legacy integration, unstable external API | Domain protection | Translation complexity |
-| **Conformist** | No negotiation power, standard protocol | Simple integration | Domain compromise |
-| **Customer/Supplier** | Negotiated relationship, aligned teams | Balanced power | Requires communication |
+| Pattern                   | Use When                                   | Benefits           | Costs                  |
+| ------------------------- | ------------------------------------------ | ------------------ | ---------------------- |
+| **Shared Kernel**         | High trust, shared team, stable interfaces | Low duplication    | High coupling          |
+| **Published Language**    | Multiple consumers, stable contract        | Clear boundaries   | Documentation overhead |
+| **Anti-Corruption Layer** | Legacy integration, unstable external API  | Domain protection  | Translation complexity |
+| **Conformist**            | No negotiation power, standard protocol    | Simple integration | Domain compromise      |
+| **Customer/Supplier**     | Negotiated relationship, aligned teams     | Balanced power     | Requires communication |
 
----
+***
 
 **Navigation:**
-- [← Previous: Tactical Patterns](03-tactical-patterns.md)
-- [Next: Common Pitfalls →](05-common-pitfalls.md)
-- [Table of Contents](README.md#table-of-contents)
+
+* [← Previous: Tactical Patterns](03-tactical-patterns.md)
+* [Next: Common Pitfalls →](05-common-pitfalls.md)
+* [Table of Contents](../../#table-of-contents)

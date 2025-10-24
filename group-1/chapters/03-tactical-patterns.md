@@ -17,10 +17,11 @@ class User {
 ```
 
 **Characteristics:**
-- Has unique identity (UserId, OrderId, etc.)
-- Identity remains constant throughout lifecycle
-- State can change over time
-- Two entities with same data but different IDs are different objects
+
+* Has unique identity (UserId, OrderId, etc.)
+* Identity remains constant throughout lifecycle
+* State can change over time
+* Two entities with same data but different IDs are different objects
 
 ## 3.2 Value Object
 
@@ -37,10 +38,11 @@ class Money {
 ```
 
 **Characteristics:**
-- No unique identity
-- Defined entirely by its attributes
-- Immutable (create new instance for changes)
-- Two value objects with same attributes are interchangeable
+
+* No unique identity
+* Defined entirely by its attributes
+* Immutable (create new instance for changes)
+* Two value objects with same attributes are interchangeable
 
 ## 3.3 Aggregate
 
@@ -80,9 +82,9 @@ graph TB
 
 ### Aggregate Rules
 
-- External entities can only reference the Aggregate Root
-- Root enforces all invariants
-- Transaction boundaries = Aggregate boundaries
+* External entities can only reference the Aggregate Root
+* Root enforces all invariants
+* Transaction boundaries = Aggregate boundaries
 
 ```typescript
 class Order { // Aggregate Root
@@ -113,10 +115,11 @@ class OrderPlacedEvent extends DomainEvent {
 ```
 
 **Characteristics:**
-- Immutable
-- Named in past tense (OrderPlaced, UserRegistered)
-- Contain data about what happened
-- Used for decoupling and integration
+
+* Immutable
+* Named in past tense (OrderPlaced, UserRegistered)
+* Contain data about what happened
+* Used for decoupling and integration
 
 ## 3.5 Repository
 
@@ -130,19 +133,21 @@ export interface OrderRepository {
 ```
 
 **Characteristics:**
-- Collection-like interface
-- Hides persistence details from domain
-- Works with aggregate roots only
-- Defined in domain, implemented in infrastructure
+
+* Collection-like interface
+* Hides persistence details from domain
+* Works with aggregate roots only
+* Defined in domain, implemented in infrastructure
 
 ## 3.6 Domain Services
 
 Stateless operations that don't belong to a single entity.
 
 **Use when:**
-- Logic spans multiple aggregates
-- Complex calculations
-- External system coordination
+
+* Logic spans multiple aggregates
+* Complex calculations
+* External system coordination
 
 ```typescript
 export interface TransferMoneyService {
@@ -155,12 +160,14 @@ export interface TransferMoneyService {
 ```
 
 **When to Use Domain Services vs Entity Methods:**
-- Entity method: behavior naturally belongs to that entity
-- Domain Service: behavior involves multiple aggregates or doesn't fit any single entity
 
----
+* Entity method: behavior naturally belongs to that entity
+* Domain Service: behavior involves multiple aggregates or doesn't fit any single entity
+
+***
 
 **Navigation:**
-- [← Previous: Strategic Design](02-strategic-design.md)
-- [Next: Integration Patterns →](04-integration-patterns.md)
-- [Table of Contents](README.md#table-of-contents)
+
+* [← Previous: Strategic Design](02-strategic-design.md)
+* [Next: Integration Patterns →](04-integration-patterns.md)
+* [Table of Contents](../../#table-of-contents)

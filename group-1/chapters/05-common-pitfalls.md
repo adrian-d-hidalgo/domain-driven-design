@@ -52,10 +52,11 @@ class Order {
 ```
 
 **Why it's bad:**
-- Business logic scattered across services
-- Entities become dumb data containers
-- Breaks encapsulation
-- Harder to maintain and test
+
+* Business logic scattered across services
+* Entities become dumb data containers
+* Breaks encapsulation
+* Harder to maintain and test
 
 ## 2. Database Design First
 
@@ -99,15 +100,17 @@ class Order {
 ```
 
 **Why it's bad:**
-- Database concerns leak into domain
-- Focus on storage instead of behavior
-- Domain model constrained by DB capabilities
-- Harder to refactor
+
+* Database concerns leak into domain
+* Focus on storage instead of behavior
+* Domain model constrained by DB capabilities
+* Harder to refactor
 
 **Do instead:**
-- Model the domain first
-- Let infrastructure adapt to domain model
-- Use mappers/adapters between domain and persistence
+
+* Model the domain first
+* Let infrastructure adapt to domain model
+* Use mappers/adapters between domain and persistence
 
 ## 3. Bloated Shared Kernel
 
@@ -132,15 +135,17 @@ class Order {
 ```
 
 **Why it's bad:**
-- High coupling between contexts
-- Changes in one context break others
-- Difficult to evolve contexts independently
-- Defeats purpose of bounded contexts
+
+* High coupling between contexts
+* Changes in one context break others
+* Difficult to evolve contexts independently
+* Defeats purpose of bounded contexts
 
 **Do instead:**
-- Share only truly generic concepts
-- Prefer duplication over wrong abstraction
-- Use integration patterns (ACL, Published Language)
+
+* Share only truly generic concepts
+* Prefer duplication over wrong abstraction
+* Use integration patterns (ACL, Published Language)
 
 ## 4. Ignoring Ubiquitous Language
 
@@ -177,15 +182,17 @@ class InventoryManager {
 ```
 
 **Why it's bad:**
-- Disconnect between code and business
-- Domain experts can't read the code
-- Knowledge crunching is lost
-- Harder to communicate
+
+* Disconnect between code and business
+* Domain experts can't read the code
+* Knowledge crunching is lost
+* Harder to communicate
 
 **Do instead:**
-- Use exact terms from domain experts
-- Rename when language evolves
-- Keep glossary in sync with code
+
+* Use exact terms from domain experts
+* Rename when language evolves
+* Keep glossary in sync with code
 
 ## 5. Large Aggregates
 
@@ -220,15 +227,17 @@ class Payment {
 ```
 
 **Why it's bad:**
-- Performance issues (loading too much data)
-- Concurrency conflicts (more contention)
-- Harder to reason about invariants
-- Difficult to test
+
+* Performance issues (loading too much data)
+* Concurrency conflicts (more contention)
+* Harder to reason about invariants
+* Difficult to test
 
 **Do instead:**
-- Keep aggregates focused on invariants
-- Reference other aggregates by ID
-- Use domain events for coordination
+
+* Keep aggregates focused on invariants
+* Reference other aggregates by ID
+* Use domain events for coordination
 
 ## 6. Misusing Domain Events
 
@@ -276,36 +285,41 @@ class PlaceOrderUseCase {
 ```
 
 **Why it's bad:**
-- Domain becomes coupled to workflow
-- Hard to reason about side effects
-- Testing becomes difficult
-- Violates single responsibility
+
+* Domain becomes coupled to workflow
+* Hard to reason about side effects
+* Testing becomes difficult
+* Violates single responsibility
 
 **Do instead:**
-- Domain events record facts
-- Application layer orchestrates workflows
-- Use saga/process manager for complex flows
+
+* Domain events record facts
+* Application layer orchestrates workflows
+* Use saga/process manager for complex flows
 
 ## 7. Over-Engineering Simple Domains
 
 **Problem:** Applying full DDD to simple CRUD applications.
 
 **When DDD is overkill:**
-- Simple data entry forms
-- Basic reporting tools
-- Straightforward admin panels
-- Minimal business logic
+
+* Simple data entry forms
+* Basic reporting tools
+* Straightforward admin panels
+* Minimal business logic
 
 **Do instead:**
-- Use simpler patterns (Active Record, Transaction Script)
-- Apply DDD only to complex subdomains
-- Start simple, refactor to DDD when complexity justifies it
+
+* Use simpler patterns (Active Record, Transaction Script)
+* Apply DDD only to complex subdomains
+* Start simple, refactor to DDD when complexity justifies it
 
 See [Chapter 1: When to Use DDD](01-when-to-use-ddd.md) for decision criteria.
 
----
+***
 
 **Navigation:**
-- [← Previous: Integration Patterns](04-integration-patterns.md)
-- [Next: Appendix A →](appendix-a-strategic-classification.md)
-- [Table of Contents](README.md#table-of-contents)
+
+* [← Previous: Integration Patterns](04-integration-patterns.md)
+* [Next: Appendix A →](../../appendix-a-strategic-classification.md)
+* [Table of Contents](../../#table-of-contents)
