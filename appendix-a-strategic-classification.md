@@ -214,6 +214,6 @@ Is it a competitive differentiator?
 
 **Navigation:**
 
-* [← Previous: Common Pitfalls](group-1/chapters/05-common-pitfalls.md)
+* [← Previous: Common Pitfalls](05-common-pitfalls.md)
 * [Next: Quick Reference →](quick-reference.md)
 * [Table of Contents](./#table-of-contents)

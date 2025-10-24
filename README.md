@@ -19,14 +19,14 @@ This book provides a comprehensive conceptual foundation for Domain-Driven Desig
 **If you're new to DDD:**
 
 1. Start with [Introduction](./#introduction) to understand the core philosophy
-2. Read [Chapter 1: When to Use DDD](group-1/chapters/01-when-to-use-ddd.md) to assess applicability
-3. Study [Chapter 2: Strategic Design](group-1/chapters/02-strategic-design.md) before diving into tactical patterns
-4. Reference [Chapter 3: Tactical Patterns](group-1/chapters/03-tactical-patterns.md) as needed
+2. Read [Chapter 1: When to Use DDD](01-when-to-use-ddd.md) to assess applicability
+3. Study [Chapter 2: Strategic Design](02-strategic-design.md) before diving into tactical patterns
+4. Reference [Chapter 3: Tactical Patterns](03-tactical-patterns.md) as needed
 
 **If you're experienced:**
 
 * Use the [Table of Contents](./#table-of-contents) to jump to specific patterns
-* Review [Chapter 5: Common Pitfalls](group-1/chapters/05-common-pitfalls.md) to avoid known issues
+* Review [Chapter 5: Common Pitfalls](05-common-pitfalls.md) to avoid known issues
 * Consult the [Quick Reference](quick-reference.md) for pattern comparisons
 
 ***
@@ -39,24 +39,24 @@ Understanding the Philosophy Behind DDD
 
 ### Core Chapters
 
-1. [**When to Use DDD**](group-1/chapters/01-when-to-use-ddd.md) Applicability and Decision Criteria
-2. [**Strategic Design**](group-1/chapters/02-strategic-design.md)
+1. [**When to Use DDD**](01-when-to-use-ddd.md) Applicability and Decision Criteria
+2. [**Strategic Design**](02-strategic-design.md)
    * Domain and Subdomain
    * Bounded Context
    * Ubiquitous Language
    * Strategic Classification
-3. [**Tactical Patterns**](group-1/chapters/03-tactical-patterns.md)
+3. [**Tactical Patterns**](03-tactical-patterns.md)
    * Entity
    * Value Object
    * Aggregate
    * Domain Events
    * Repository
    * Domain Services
-4. [**Integration Patterns**](group-1/chapters/04-integration-patterns.md)
+4. [**Integration Patterns**](04-integration-patterns.md)
    * Context Map
    * Shared Kernel
    * Anti-Corruption Layer
-5. [**Common Pitfalls**](group-1/chapters/05-common-pitfalls.md) Mistakes to Avoid
+5. [**Common Pitfalls**](05-common-pitfalls.md) Mistakes to Avoid
 
 ### Appendices
 
@@ -95,7 +95,7 @@ Traditional software development often starts with database schema design or UI 
 
 This inversion is powerful for complex domains but adds overhead for simple applications. Understanding when to apply DDD is as important as understanding how.
 
-> **Next:** Start with [Chapter 1: When to Use DDD](group-1/chapters/01-when-to-use-ddd.md) to determine if DDD is right for your project.
+> **Next:** Start with [Chapter 1: When to Use DDD](01-when-to-use-ddd.md) to determine if DDD is right for your project.
 
 ***
 
@@ -143,9 +143,9 @@ For practical implementation examples, look for technology-specific DDD cookbook
 
 1. **Read this book** (domain-driven-design/)
    * Start with [Introduction](./#introduction)
-   * Study [When to Use DDD](group-1/chapters/01-when-to-use-ddd.md)
-   * Learn [Strategic Design](group-1/chapters/02-strategic-design.md)
-   * Understand [Tactical Patterns](group-1/chapters/03-tactical-patterns.md)
+   * Study [When to Use DDD](01-when-to-use-ddd.md)
+   * Learn [Strategic Design](02-strategic-design.md)
+   * Understand [Tactical Patterns](03-tactical-patterns.md)
 2. **Practice with examples**
    * Build sample projects in your chosen framework
    * Refer back to theory when confused
@@ -153,11 +153,11 @@ For practical implementation examples, look for technology-specific DDD cookbook
 ### For Experienced Developers
 
 * Use [Quick Reference](quick-reference.md) for pattern lookups
-* Review [Common Pitfalls](group-1/chapters/05-common-pitfalls.md) regularly
+* Review [Common Pitfalls](05-common-pitfalls.md) regularly
 * Consult [Appendix A](appendix-a-strategic-classification.md) for strategic decisions
 
 ***
 
 **Remember:** This is a **conceptual reference book**. For code examples and practical implementation, look for technology-specific cookbooks in your chosen framework.
 
-**Start reading:** [Chapter 1: When to Use DDD →](group-1/chapters/01-when-to-use-ddd.md)
+**Start reading:** [Chapter 1: When to Use DDD →](01-when-to-use-ddd.md)

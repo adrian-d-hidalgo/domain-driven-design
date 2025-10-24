@@ -181,7 +181,7 @@ Is this logic about a single entity's state?
 * Technical > domain complexity
 * Tight constraints (time, budget)
 
-For details, see [Chapter 1: When to Use DDD](group-1/chapters/01-when-to-use-ddd.md).
+For details, see [Chapter 1: When to Use DDD](01-when-to-use-ddd.md).
 
 ## Aggregate Design Checklist
 
