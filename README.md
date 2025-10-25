@@ -12,6 +12,21 @@ This book provides a comprehensive conceptual foundation for Domain-Driven Desig
 
 **Type:** Conceptual reference book (technology-agnostic)
 
+### Prerequisites
+
+This book assumes you have:
+
+- **Software development experience** (1-2+ years building applications)
+- **Basic architecture knowledge** (understanding of layers, separation of concerns)
+- **Familiarity with object-oriented programming** (classes, encapsulation, inheritance)
+- **Database fundamentals** (entities, relationships, transactions)
+- **Experience with business requirements** (translating business needs to code)
+
+**Not required:**
+- Framework-specific knowledge (this book is technology-agnostic)
+- Prior DDD experience
+- Experience with microservices or distributed systems
+
 ***
 
 ## How to Read This Book
@@ -41,26 +56,107 @@ Understanding the Philosophy Behind DDD
 
 1. [**When to Use DDD**](01-when-to-use-ddd.md) Applicability and Decision Criteria
 2. [**Strategic Design**](02-strategic-design.md)
-   * Domain and Subdomain
-   * Bounded Context
-   * Ubiquitous Language
-   * Strategic Classification
+   * 2.1 Domain and Subdomain
+   * 2.2 Bounded Context
+   * 2.3 Ubiquitous Language
+   * 2.4 Strategic Classification
+   * 2.5 DDD Discovery Methodologies
+     * 2.5.1 Event Storming
+     * 2.5.2 Domain Storytelling
+     * 2.5.3 Example Mapping
+     * 2.5.4 Context Mapping Workshop
+     * 2.5.5 Choosing the Right Methodology
 3. [**Tactical Patterns**](03-tactical-patterns.md)
-   * Entity
-   * Value Object
-   * Aggregate
-   * Domain Events
-   * Repository
-   * Domain Services
+   * 3.0 Architecture Overview
+     * 3.0.1 Layered Architecture in DDD
+     * 3.0.2 Isolating the Domain: Hexagonal Architecture
+   * 3.1 Entity
+     * 3.1.1 Common Misconceptions About Entities
+   * 3.2 Value Object
+     * 3.2.1 Common Misconceptions About Value Objects
+   * 3.3 Aggregate
+     * 3.3.1 Aggregate Design Principles
+     * 3.3.2 Finding Aggregate Boundaries
+     * 3.3.3 Common Aggregate Design Mistakes
+     * 3.3.4 Aggregate Refactoring Process
+     * 3.3.5 Aggregate Design Checklist
+   * 3.4 Domain Events
+     * 3.4.1 When to Use Domain Events
+     * 3.4.2 When NOT to Use Domain Events
+     * 3.4.3 Domain Event Patterns
+     * 3.4.4 Implementation Timing
+     * 3.4.5 Error Handling for Event Handlers
+     * 3.4.6 Common Domain Event Mistakes
+     * 3.4.7 Domain Events vs Integration Events
+     * 3.4.8 Event Naming Conventions
+     * 3.4.9 Discovery Techniques (see Chapter 2.5)
+   * 3.5 Repository
+   * 3.6 Domain Services
+     * 3.6.1 When to Use Domain Services
+     * 3.6.2 What Domain Services Should NOT Do
+     * 3.6.3 Domain Service vs Application Service
+     * 3.6.4 The Common Anti-Pattern
+     * 3.6.5 Decision Matrix
+   * 3.7 Application Services
+     * 3.7.0 Use Cases and Application Services
+     * 3.7.1 Application Service vs Domain Service
+     * 3.7.2 Responsibilities of Application Services
+     * 3.7.3 What Application Services Should NOT Do
+     * 3.7.4 Application Service Patterns
+     * 3.7.5 Testing Application Services
+     * 3.7.6 Application Service Best Practices
+     * 3.7.7 Testing Strategy for DDD Applications
+   * 3.8 Business Rules Organization
+     * 3.8.1 Types of Business Rules
+     * 3.8.2 Where Each Rule Lives
+     * 3.8.3 Validation Layering
+     * 3.8.4 Organizing Rules: The Big Picture
 4. [**Integration Patterns**](04-integration-patterns.md)
-   * Context Map
-   * Shared Kernel
-   * Anti-Corruption Layer
+   * 4.1 Context Map
+     * 4.1.1 Context Relationship Types
+       * Partnership
+       * Customer/Supplier
+       * Conformist
+       * Anti-Corruption Layer (ACL)
+       * Open Host Service
+       * Published Language
+     * 4.1.2 Choosing Integration Patterns
+     * 4.1.3 Context Map Evolution
+   * 4.2 Shared Kernel
+   * 4.3 Anti-Corruption Layer
 5. [**Common Pitfalls**](05-common-pitfalls.md) Mistakes to Avoid
+6. [**Advanced Patterns**](06-advanced-patterns.md)
+   * 6.1 Event-Driven Patterns
+     * 6.1.1 Event Recording and Publishing Flow
+     * 6.1.2 Outbox Pattern (Transactional Guarantee)
+     * 6.1.3 Inbox Pattern (Idempotency)
+     * 6.1.4 When to Use Each Pattern
+   * 6.2 Distributed Coordination
+     * 6.2.1 Saga Pattern (Orchestration)
+     * 6.2.2 Compensating Transactions
+     * 6.2.3 Eventual Consistency Trade-offs
+   * 6.3 Event Sourcing
+     * 6.3.1 What is Event Sourcing?
+     * 6.3.2 Core Concepts
+     * 6.3.3 When to Use Event Sourcing
+     * 6.3.4 Trade-offs
+     * 6.3.5 Event Sourcing vs Traditional Persistence
+     * 6.3.6 Common Mistakes
+     * 6.3.7 Event Sourcing with DDD Aggregates
+   * 6.4 CQRS (Command Query Responsibility Segregation)
+     * 6.4.1 What is CQRS?
+     * 6.4.2 CQRS Patterns
+     * 6.4.3 When to Use CQRS
+     * 6.4.4 Trade-offs
+     * 6.4.5 CQRS with Eventual Consistency
+     * 6.4.6 Common Mistakes
+     * 6.4.7 CQRS Decision Matrix
+     * 6.4.8 CQRS with DDD
 
 ### Appendices
 
 * [**Appendix A: Strategic Classification Framework**](appendix-a-strategic-classification.md) Detailed framework for classifying subdomains (Core, Supporting, Generic) with e-commerce examples
+* [**Glossary**](glossary.md) Quick reference definitions for all DDD terms
 * [**Quick Reference**](quick-reference.md) Pattern comparisons, decision trees, and cheat sheets
 
 ### [References and Further Reading](./#references-and-further-reading)
@@ -133,7 +229,7 @@ This inversion is powerful for complex domains but adds overhead for simple appl
 
 ### Recommended Complementary Reading
 
-For practical implementation examples, look for technology-specific DDD cookbooks and hexagonal architecture guides in your framework of choice.
+For practical implementation, you will need framework-specific resources that demonstrate how to apply these patterns in real code. The concepts in this book are implementation-agnostic and can be applied in any programming language or framework.
 
 ***
 
@@ -158,6 +254,6 @@ For practical implementation examples, look for technology-specific DDD cookbook
 
 ***
 
-**Remember:** This is a **conceptual reference book**. For code examples and practical implementation, look for technology-specific cookbooks in your chosen framework.
+**Remember:** This is a **conceptual reference book**. The patterns and principles here are technology-agnostic and require framework-specific knowledge to implement in real projects.
 
 **Start reading:** [Chapter 1: When to Use DDD →](01-when-to-use-ddd.md)
